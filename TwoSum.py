@@ -1,5 +1,4 @@
 # coding=utf-8
-
 class Solution:
     def twoSum(self, nums, target):
         for i in range(len(nums)):
