@@ -1,3 +1,10 @@
+"""
+从两个有序数组中找到中位数
+思路：
+    依次比较两个有序数组的中位数大小，排除不相关元素；
+    例如：若nums1的中位数大于nums2的中位数，则最终的中位数应该在nums1当前中位数之前的部分、nums2当前中位数之后的部分
+
+"""
 class Solution:
     def findMedianSortedArrays(self, nums1, nums2):
         if not nums1 and not nums2:
