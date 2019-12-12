@@ -10,3 +10,4 @@ class Solution:
             else:
                 cnt += 1
         return length
+
