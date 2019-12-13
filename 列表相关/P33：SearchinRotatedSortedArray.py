@@ -37,7 +37,7 @@ class Solution:
             i, j = 0, pivot - 1
         elif target <= nums[len(nums) - 1]:
             i, j = pivot, len(nums) - 1
-
+        # 二分查找
         while i <= j:
             mid = (i + j) >> 1
             if nums[mid] < target:
