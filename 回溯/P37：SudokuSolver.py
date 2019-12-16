@@ -53,7 +53,7 @@ class Solution:
             # 更新当前位置后，递归求解后续的数独问题
             if self.solveSudoku(board):
                 return True
-            # 恢复当前状态
+            # 恢复当前状态，考虑for循环的最后一个，如果不重置，会保留一个错误状态
             board[i][j] = '.'
 
         return False
