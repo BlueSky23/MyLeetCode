@@ -1,4 +1,3 @@
-# 回溯法，注意0的位置要求
 class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         # dfs 遍历
@@ -8,7 +7,7 @@ class Solution:
                 return
             # 找到合适的IP，添加到结果集
             elif path.count('.') == 3 and int(s) < 256:
-                if (len(s) == 1) or (len(s) == 2 and s[0] != '0') or (len(s) == 3 and s[0] != '0' and s[:2] != '00'):
+                if (len(s) == 1) or (len(s) == 2 and s[0] != '0') or (len(s) == 3 and s[0] != '0'):
                     path += '.' + s
                     ret.append(path[1:])
                     return
@@ -23,7 +22,7 @@ class Solution:
                     tmp += '.' + s[:2]
                     dfs(s[2:], tmp, ret)
 
-                if len(s) >= 3 and int(s[:3]) < 256 and s[0] != '0' and s[:2] != '00':
+                if len(s) >= 3 and int(s[:3]) < 256 and s[0] != '0':
                     tmp = path
                     tmp += '.' + s[:3]
                     dfs(s[3:], tmp, ret)
