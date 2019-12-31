@@ -1,3 +1,4 @@
+# 回溯法，注意0的位置要求
 class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         # dfs 遍历
