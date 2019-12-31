@@ -1,6 +1,6 @@
 from collections import Counter
 
-
+# 思路：搞清楚问题的本质，找一个分割点，前后部分对应转为字问题
 class Solution:
     def isScramble(self, s1: str, s2: str) -> bool:
         if len(s1) != len(s2):
