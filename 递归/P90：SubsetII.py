@@ -2,6 +2,7 @@ class Solution:
     def subsetsWithDup(self, nums):
         if not nums:
             return [[]]
+        nums.sort()
         # 转化为子问题求解
         tmp = self.subsetsWithDup(nums[1:])
         # 保存结果
@@ -12,7 +13,6 @@ class Solution:
             ls = []
             ls.extend(i)
             ls.append(nums[0])
-            ls.sort()
             if ls not in ret:
                 ret.append(ls)
 
