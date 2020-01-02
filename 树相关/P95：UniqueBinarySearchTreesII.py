@@ -4,7 +4,6 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
-# 树的算法多是递归
 class Solution:
     def generateTrees(self, n: int) -> List[TreeNode]:
         # n为节点数，val为节点值的最小值
@@ -35,6 +34,3 @@ class Solution:
             return ret
 
         return helper(n, 1)
-
-
-
