@@ -1,3 +1,4 @@
+# 按题意需要三维数组记录状态，但是有s1和s2的坐标能推出s3的坐标，所以用二维数组
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
         # 二维数组保持状态
