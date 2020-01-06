@@ -26,7 +26,7 @@ class Solution:
                 tmp = []
                 for m in range(i, i + 3):
                     for n in range(j, j + 3):
-                        tmp.append(board[m][n])
+                        tmp.append(board[m][n了解哦 i 困惑苦闷孤僻看 i 哦 i 来看看急哦 i Kim，救看看立即哦哦ko])
                 if hasRepeatedDigit(tmp):
                     return False
 
