@@ -1,4 +1,5 @@
-# 动态规划
+# 动态规划：时间优，耗空间
+# 递归：空间优，耗时间
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
         # 判断是否是回文
