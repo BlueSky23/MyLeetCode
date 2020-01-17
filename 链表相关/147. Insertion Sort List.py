@@ -10,8 +10,16 @@ class Solution:
             return
 
         ordered_list_head = ListNode(-sys.maxsize)
+        ordered_list_tail = ordered_list_head
         while head:
             next_node = head.next
+            # 此种情况无需与之前元素比较
+            if head.val > ordered_list_tail.val:
+                ordered_list_tail.next = head
+                ordered_list_tail = head
+                ordered_list_tail.next = None
+                head = next_node
+                continue
             # 对于每一个元素，在已排好序的列表中插入
             pre, tmp = None, ordered_list_head
             while tmp:
@@ -24,6 +32,7 @@ class Solution:
                 if not tmp.next:
                     tmp.next = head
                     head.next = None
+                    ordered_list_tail = head
                     break
                 pre, tmp = tmp, tmp.next
 
