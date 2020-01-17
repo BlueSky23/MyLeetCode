@@ -1,7 +1,7 @@
 # 核心思想：每个当前元素的糖果数只取决于左右两个元素，逐层迭代更新，直至所有元素都不再变化
 
 class Solution:
-    def candy(self, ratings: List[int]) -> int:
+    def candy(self, ratings) -> int:
         if not ratings:
             return 0
 
@@ -25,3 +25,7 @@ class Solution:
 
             if not flag:
                 return sum(candy)
+
+
+s = Solution()
+print(s.candy([1, 2, 3, 3, 1]))
