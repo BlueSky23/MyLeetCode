@@ -22,8 +22,7 @@ class LRUCache:
             return
         # 最不常用的元素在0位置
         if len(self.cache_dict) >= self.capacity:
-            keys = list(self.cache_dict.keys())
-            self.cache_dict.pop(keys[0])
+            self.cache_dict.popitem(last=False)
         # 放入一个新的元素,在字典的最后面
         self.cache_dict[key] = value
 
