@@ -10,8 +10,8 @@ class Solution:
         def helper(root, ret):
             if not root:
                 return
-            helper(root.left)
-            helper(root.right)
+            helper(root.left, ret)
+            helper(root.right, ret)
             ret.append(root.val)
 
         ret = []
