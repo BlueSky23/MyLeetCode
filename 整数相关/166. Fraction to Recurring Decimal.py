@@ -41,6 +41,7 @@ class Solution:
 
             res += str(numerator // denominator)
             len_frac += 1
+
             numerator = numerator % denominator
             # 除数出现过，则有循环
             if numerator in history:
