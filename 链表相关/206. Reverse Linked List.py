@@ -10,11 +10,7 @@ class Solution:
             return head
 
         tmpNode = self.reverseList(head.next)
-        node = tmpNode
-        while node.next:
-            node = node.next
-
-        node.next = head
+        head.next.next = head
         head.next = None
 
         return tmpNode
